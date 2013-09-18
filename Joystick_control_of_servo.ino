@@ -1,10 +1,11 @@
-// Controlling a servo position using a Parallax 2-Axis Joystick 27800 (coupled variable resistor) 
+// Controlling a servo pair position using a Parallax 2-Axis Joystick 27800 (coupled variable resistor) 
+// Serves in an elbow configuration 
 // As modified by Colin Chapman [ChapLab]
 
 #include <Servo.h> 
  
-Servo Aservo;                           // create servo object to control servo 
-Servo Bservo;                           // create servo object to control servo 
+Servo Aservo;                           // create servo object to control servo base 
+Servo Bservo;                           // create servo object to control servo arm 
  
 int xAxis = 0;                          // analog pin used to connect the x axis of the joystick
 int yAxis = 1;                          // analog pin used to connect the y axis of the joystick
