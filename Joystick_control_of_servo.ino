@@ -1,5 +1,5 @@
 // Controlling a servo pair position using a Parallax 2-Axis Joystick 27800 (coupled variable resistor) 
-// Serves in an elbow configuration 
+// Servos in an elbow configuration 
 // As modified by Colin Chapman [ChapLab]
 
 #include <Servo.h> 
@@ -23,7 +23,7 @@ void loop()
   xVal = analogRead(xAxis);             // reads the value of the x axis of the joystick (value between 0 and 1023) 
   xVal = map(xVal, 0, 1023, 0, 179);    // scale it to use it with the servo (value between 0 and 180) 
   Aservo.write(xVal);                   // sets the servo position according to the scaled value 
-  yVal = analogRead(xAxis);             // reads the value of the y axis of the joystick (value between 0 and 1023) 
+  yVal = analogRead(yAxis);             // reads the value of the y axis of the joystick (value between 0 and 1023) 
   yVal = map(yVal, 0, 1023, 0, 179);    // scale it to use it with the servo (value between 0 and 180) 
   Bservo.write(yVal);                   // sets the servo position according to the scaled value 
   delay(15);                            // waits for the servo to get there 
